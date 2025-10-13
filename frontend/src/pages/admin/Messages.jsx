@@ -13,7 +13,7 @@ export default function Messages() {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/contact", {
+      const res = await axios.get("https://tmylines-queh.onrender.com/api/contact", {
         withCredentials: true,
       });
       setMessages(res.data);
