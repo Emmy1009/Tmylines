@@ -31,7 +31,7 @@ export default function Messages() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/messages/${id}`, {
+      await axios.delete(`https://tmylines-queh.onrender.com/api/messages/${id}`, {
         withCredentials: true,
       });
       toast.success("Message deleted successfully");
