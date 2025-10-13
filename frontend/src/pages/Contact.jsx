@@ -23,7 +23,7 @@ const Contact = () => {
 
     try {
       // optional backend POST — if you plan to handle messages
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post("https://tmylines-queh.onrender.com/api/contact", formData);
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
