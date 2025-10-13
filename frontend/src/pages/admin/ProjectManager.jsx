@@ -53,7 +53,7 @@ const ProjectManagement = () => {
   // Delete project
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/projects/${id}`);
+      await axios.delete(`https://tmylines-queh.onrender.com/api/projects/${id}`);
       setProjects((prev) => prev.filter((project) => project.id !== id));
       toast.success("✅ Project deleted successfully");
     } catch (err) {
