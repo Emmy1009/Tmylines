@@ -26,8 +26,14 @@ app.use(express.json({limit:"50mb"}));
 app.use(express.urlencoded({limit:"50mb"}));
 app.use(cookieParser());
 
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Serve static files from the frontend build folder
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 // Test route
 app.use("/uploads", express.static(path.join(__dirname,"uploads")
