@@ -28,7 +28,7 @@ export default function Signup() {
       const role = formData.email.includes("tmylines") ? "admin" : "user";
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://tmylines-queh.onrender.com/api/auth/register",
         { ...formData, role },
         { withCredentials: true }
       );
