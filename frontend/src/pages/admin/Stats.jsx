@@ -13,7 +13,7 @@ const Stat = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/projects");
+        const res = await axios.get("https://tmylines-queh.onrender.com/api/projects");
         const data = res.data;
 
         setStats({
