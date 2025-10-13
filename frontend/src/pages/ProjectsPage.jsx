@@ -14,7 +14,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/projects");
+        const res = await axios.get("https://tmylines-queh.onrender.com/api/projects");
         console.log("Fetched projects:", res.data);
         setProjects(res.data);
       } catch (err) {
