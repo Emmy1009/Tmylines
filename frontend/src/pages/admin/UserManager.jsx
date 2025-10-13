@@ -14,7 +14,7 @@ const UserManager = () => {
     // ✅ Fetch all users
     const fetchUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/users");
+            const res = await axios.get("https://tmylines-queh.onrender.com/api/users");
             setUsers(res.data);
         } catch (error) {
             console.error("Error fetching users:", error);
@@ -29,7 +29,7 @@ const UserManager = () => {
     const handleAddUser = async e => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/users", newUser);
+            await axios.post("https://tmylines-queh.onrender.com/api/users", newUser);
             setNewUser({ name: "", email: "", role: "user", password: "" });
             fetchUsers();
         } catch (error) {
@@ -41,7 +41,7 @@ const UserManager = () => {
     const handleDelete = async id => {
         if (window.confirm("Are you sure you want to delete this user?")) {
             try {
-                await axios.delete(`http://localhost:5000/api/users/${id}`);
+                await axios.delete(`https://tmylines-queh.onrender.com/api/users/${id}`);
                 fetchUsers();
             } catch (error) {
                 console.error("Delete failed:", error);
