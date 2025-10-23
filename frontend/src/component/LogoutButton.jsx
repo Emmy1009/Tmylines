@@ -8,7 +8,7 @@ const LogoutButton = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("https://tmylines-queh.onrender.com/api/auth/logout", {}, { withCredentials: true });
       toast.success("Logged out successfully!");
       localStorage.removeItem("isAuthenticated");
 localStorage.removeItem("role");
